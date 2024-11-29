@@ -6,8 +6,6 @@ import random
 import pywinauto
 from enum import Enum
 
-app = pywinauto.Application().connect(path='Miscrits_Client.exe')
-
 sleep_time = 1
 
 class state(Enum):
@@ -44,7 +42,6 @@ while True:
     # Search Area Logic
     if locate_object("mansion_cabinet") == False:
         print("Searching for Leaves")
-        screen_size = app['Miscrits (DEBUG)'].rectangle()
         # app['Miscrits (DEBUG)'].click_input(coords=(screen_size.width()//2 + random.randint(-150, 150), screen_size.height()//2 + random.randint(-150, 150)))
     else:
         time.sleep(sleep_time)
@@ -58,7 +55,6 @@ while True:
 
     if locate_object("mansion_box") == False:
         print("Searching for Shrug")
-        screen_size = app['Miscrits (DEBUG)'].rectangle()
         # app['Miscrits (DEBUG)'].click_input(coords=(screen_size.width()//2 + random.randint(-150, 150), screen_size.height()//2 + random.randint(-150, 150)))
     else:
         time.sleep(sleep_time)
