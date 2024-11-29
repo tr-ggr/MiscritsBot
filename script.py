@@ -43,7 +43,7 @@ def humanizer():
 
 def locate(target):
     try:
-        pos = ps.locateOnScreen(f"./targets/{target}.png", confidence=0.7)
+        pos = pg.locateOnScreen(f"./targets/{target}.png", confidence=0.7)
         print(f"Located {target} on Screen!")
         pg.moveTo(pos[0]+20, pos[1]+20)
 

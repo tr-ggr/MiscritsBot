@@ -3,8 +3,6 @@ import time
 import keyboard
 import pyscreeze as ps
 import random
-import pywinauto
-import pytesseract as ts
 import cv2
 import numpy as np
 from enum import Enum
