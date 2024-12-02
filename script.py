@@ -17,8 +17,8 @@ class train(Enum):
 # Attributes
 
 search_targets = [
-    "mountain_gem1",
-    "mountain_gem2"
+    "shores_puddle",
+    "shores_eggs"
 ]
 
 battle_targets = [
