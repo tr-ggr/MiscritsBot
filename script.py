@@ -71,6 +71,9 @@ def check_state():
         current_state = state.SEARCHING
 
 
+image_lol = pg.screenshot()
+image_lol.save("lol.png")
+
 # Main Loop
 while True:
     # Check state first

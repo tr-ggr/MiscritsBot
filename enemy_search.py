@@ -1,25 +1,11 @@
 import pyautogui as pg
 import time
-import keyboard
-import pyscreeze as ps
 import random
-import cv2
-import numpy as np
 from enum import Enum
 import re
 import easyocr
 
 reader = easyocr.Reader(['en']) # specify the language 
-
-# print(ts.image_to_string(image="name_test.png"))
-def get_grayscale(image):
-    return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
-def thresholding(image):
-    return cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
-
-def remove_noise(image):
-    return cv2.fastNlMeansDenoisingColored(image, None, 10, 10, 7, 15)
 
 def strcmp(a, b):
     a = a.lower()
@@ -46,7 +32,7 @@ targets = ["cubsprout", "sparkspeck"]
 
 def locate(target):
     try:
-        pos = ps.locateOnScreen(f"./targets/{target}.png", confidence=0.7)
+        pos = pg.locateOnScreen(f"./targets/{target}.png", confidence=0.7)
         print(f"Located {target} on Screen!")
 
         return pos
